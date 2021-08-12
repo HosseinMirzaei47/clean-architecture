@@ -1,11 +1,3 @@
 <resources>
-    <string name="app_name">To Do</string>
-    <string name="about_us_body">Organize your life</string>
-    <string name="we_ve_improved">We\'ve Improved</string>
-    <string name="update_description">For more feature and a better use experience please update this app</string>
-    <string name="update_now">Update Now</string>
-    <string name="ignore">Ignore</string>
-    <string name="no_market_found">No Market Found!</string>
-    <string name="what_s_new">What\'s new</string>
-    <string name="got_it">Got It</string>
+    <string name="app_name">Clean Architecture</string>
 </resources>

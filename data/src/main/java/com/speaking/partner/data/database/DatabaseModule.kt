@@ -16,17 +16,15 @@ abstract class DatabaseModule {
 
     @Binds
     @Singleton
-    abstract fun bindTodoDatabase(
-        db: TodoRoomDatabase
-    ): TodoDatabase
+    abstract fun bindDCoreDatabase(
+        db: CoreRoomDatabase
+    ): CoreDatabase
 
     companion object {
         @Provides
         @Singleton
-        fun provideDatabase(@ApplicationContext context: Context): TodoRoomDatabase {
-            return Room.databaseBuilder(context, TodoRoomDatabase::class.java, "todo-db")
-                .addMigrations(MIGRATION_1_2)
-                .build()
+        fun provideDatabase(@ApplicationContext context: Context): CoreRoomDatabase {
+            return Room.databaseBuilder(context, CoreRoomDatabase::class.java, "sample-db").build()
         }
     }
 }

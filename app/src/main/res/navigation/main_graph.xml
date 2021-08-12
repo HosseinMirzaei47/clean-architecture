@@ -1,35 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_graph"
-    app:startDestination="@id/task_graph">
+    app:startDestination="@id/home_graph">
 
-    <include app:graph="@navigation/task_graph" />
-
-    <dialog
-        android:id="@+id/updateDialogFragment"
-        android:name="com.speaking.partner.update.UpdateDialogFragment"
-        android:label="UpdateDialogFragment"
-        tools:layout="@layout/fragment_update_dialog">
-
-        <argument
-            android:name="isForce"
-            android:defaultValue="0L"
-            app:argType="long" />
-
-        <deepLink app:uri="todo://update/?isForce={isForce}" />
-
-    </dialog>
-
-    <dialog
-        android:id="@+id/changelogDialogFragment"
-        android:name="com.speaking.partner.update.ChangelogDialogFragment"
-        android:label="ChangelogDialogFragment"
-        tools:layout="@layout/fragment_changelog_dialog">
-
-        <deepLink app:uri="todo://changelog/" />
-
-    </dialog>
+    <include app:graph="@navigation/home_graph" />
 
 </navigation>

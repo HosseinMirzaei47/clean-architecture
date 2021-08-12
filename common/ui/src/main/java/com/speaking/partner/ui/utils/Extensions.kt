@@ -128,50 +128,6 @@ fun Calendar.getStartMillis(offset: Int = 0): Long {
     }
 }
 
-fun getCompleteDueDate(context: Context, dandelionDate: DandelionDate): String {
-    val dueDate = dandelionDate.toDueDate()
-    val monthDisplayName = dueDate.month.getMonthName(Calendar.SHORT)
-    return context.getString(
-        R.string.label_complete_due_date,
-        "${dueDate.year}, $monthDisplayName",
-        dueDate.day,
-        dueDate.hour,
-        dueDate.minute
-    )
-}
-
-fun getDueDate(context: Context, dandelionDate: DandelionDate): String {
-    val dueDate = dandelionDate.toDueDate()
-    val monthDisplayName = dueDate.month.getMonthName(Calendar.SHORT)
-    return context.getString(
-        R.string.label_due_date,
-        monthDisplayName,
-        dueDate.day,
-    )
-}
-
-fun getDueTime(context: Context, dandelionDate: DandelionDate): String {
-    val dueDate = dandelionDate.toDueDate()
-    return context.getString(
-        R.string.create_task_due_time,
-        dueDate.hour,
-        dueDate.minute
-    )
-}
-
-fun Calendar.getWeekDayName(): Int {
-    return when (get(Calendar.DAY_OF_WEEK)) {
-        1 -> R.string.sunday
-        2 -> R.string.monday
-        3 -> R.string.tuesday
-        4 -> R.string.wednesday
-        5 -> R.string.thursday
-        6 -> R.string.friday
-        7 -> R.string.saturday
-        else -> R.string.friday
-    }
-}
-
 fun Throwable.getMessage(context: Context): String {
     return if (this is CombinedException) {
         exceptions.map { it.getMessage(context) }.distinct().joinToString("\n")

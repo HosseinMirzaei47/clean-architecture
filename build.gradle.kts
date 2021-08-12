@@ -2,8 +2,8 @@
 buildscript {
     repositories {
         maven {
-            url = uri("https://localartifactory.jfrog.io/artifactory/local/")
-            artifactUrls("https://localartifactory.jfrog.io/artifactory/local/")
+            url = uri("https://nexus.partdp.ir/repository/part-android/")
+            artifactUrls("https://nexus.partdp.ir/repository/part-android/")
             credentials {
                 username = "android-user"
                 password = "p9PTCB[^Z}tcM}wn:ZF4NnVNd=DXC-ML=w3/6"
@@ -27,8 +27,8 @@ buildscript {
 allprojects {
     repositories {
         maven {
-            url = uri("https://localartifactory.jfrog.io/artifactory/local/")
-            artifactUrls("https://localartifactory.jfrog.io/artifactory/local/")
+            url = uri("https://nexus.partdp.ir/repository/part-android/")
+            artifactUrls("https://nexus.partdp.ir/repository/part-android/")
             credentials {
                 username = "android-user"
                 password = "p9PTCB[^Z}tcM}wn:ZF4NnVNd=DXC-ML=w3/6"

@@ -38,7 +38,7 @@
     <color name="white_smoke">#f5f5f5</color>
     <color name="common_button_bg">#5f8eb5</color>
     <color name="common_button_text">#8F8F8F</color>
-    <color name="todo_blue">#5f8eb5</color>
+    <color name="core_blue">#5f8eb5</color>
     <color name="chambray">#4c5d6e</color>
     <color name="screaming_green">#66c690</color>
     <color name="picker_primary_color">#5f8eb5</color>
@@ -50,22 +50,22 @@
     <color name="transparent">#00000000</color>
 
     <color name="button_pressed">@color/radio_pressed</color>
-    <color name="todo_secondary">@color/todo_blue</color>
-    <color name="todo_on_secondary">@color/white</color>
-    <color name="todo_text_color_primary_inverse">@color/white</color>
-    <color name="todo_status_bar">@color/todo_primary</color>
-    <color name="todo_primary">@color/light_gray</color>
-    <color name="todo_on_primary">@color/ocean_green</color>
-    <color name="todo_date_picker_header_background">@color/ocean_green</color>
-    <color name="todo_color_control_active">@color/matisse</color>
-    <color name="todo_color_control_deactive">@color/pastel_blue</color>
-    <color name="todo_alert">@color/brick_red</color>
+    <color name="core_secondary">@color/core_blue</color>
+    <color name="core_on_secondary">@color/white</color>
+    <color name="core_text_color_primary_inverse">@color/white</color>
+    <color name="core_status_bar">@color/core_primary</color>
+    <color name="core_primary">@color/light_gray</color>
+    <color name="core_on_primary">@color/ocean_green</color>
+    <color name="core_date_picker_header_background">@color/ocean_green</color>
+    <color name="core_color_control_active">@color/matisse</color>
+    <color name="core_color_control_deactive">@color/pastel_blue</color>
+    <color name="core_alert">@color/brick_red</color>
     <color name="global_text_color">@color/charcoal</color>
-    <color name="todo_color_surface">@color/independence</color>
-    <color name="todo_color_on_surface">@color/ocean_green</color>
+    <color name="core_color_surface">@color/independence</color>
+    <color name="core_color_on_surface">@color/ocean_green</color>
     <color name="title_create_task">@color/charcoal</color>
     <color name="common_inverse">@color/charcoal</color>
     <color name="text_button">@color/lotion</color>
-    <color name="todo_date_picker_ripple_color">@color/tea_green</color>
+    <color name="core_date_picker_ripple_color">@color/tea_green</color>
     <color name="vertical_line_gradient">@color/white</color>
 </resources>

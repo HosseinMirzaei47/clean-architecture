@@ -27,25 +27,6 @@
             </intent-filter>
         </activity>
 
-        <receiver
-            android:name="com.speaking.partner.domain.notification.AlarmBroadcastReceiver"
-            android:exported="false" />
-
-        <receiver
-            android:name="com.speaking.partner.notification.SystemBootBroadcastReceiver"
-            android:directBootAware="true"
-            android:enabled="true"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
-
-        <receiver
-            android:name="com.speaking.partner.domain.notification.NotificationActionsReceiver"
-            android:exported="false" />
-
         <provider
             android:name="androidx.work.impl.WorkManagerInitializer"
             android:authorities="${applicationId}.workmanager-init"

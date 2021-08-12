@@ -23,7 +23,6 @@ import com.google.android.material.textview.MaterialTextView
 import com.speaking.partner.ui.R
 import com.speaking.partner.ui.utils.EpoxyEventListener
 import com.speaking.partner.ui.utils.OnSingleClickListener
-import kotlin.math.abs
 
 @BindingAdapter("loadImage")
 fun ImageView.loadImage(url: String) {
@@ -81,7 +80,7 @@ fun View.enabledColor(value: Boolean) {
 fun getColorStateList(enabled: Boolean, context: Context) = if (enabled) {
     ColorStateList.valueOf(
         ContextCompat.getColor(
-            context, R.color.todo_secondary
+            context, R.color.core_secondary
         )
     )
 } else {
@@ -119,11 +118,6 @@ fun ImageView.loadImageRes(@DrawableRes imageRes: Int?) {
     Glide.with(context).load(imageRes).into(this)
 }
 
-@BindingAdapter("setCompleteCounts")
-fun TextView.setCompleteCounts(count: Int) {
-    text = context.getString(R.string.complete_count, count)
-}
-
 @BindingAdapter("setStrike")
 fun TextView.setStrike(flag: Boolean) {
     paintFlags = if (flag)
@@ -149,17 +143,6 @@ fun Chip.setTextColor(isSelected: Boolean) {
 @BindingAdapter("setCardBackground")
 fun MaterialCardView.setCardBackground(isSelected: Boolean) {
     setCardBackgroundColor(getItemBackground(isSelected))
-}
-
-@BindingAdapter("setWeekText")
-fun TextView.setWeekText(selectedWeek: Int) {
-    text = when {
-        selectedWeek == 0 -> context.getString(R.string.this_week)
-        selectedWeek == 1 -> context.getString(R.string.next_week)
-        selectedWeek > 1 -> context.getString(R.string.some_week_later, selectedWeek)
-        selectedWeek == -1 -> context.getString(R.string.last_week)
-        else -> context.getString(R.string.some_week_ago, abs(selectedWeek))
-    }
 }
 
 @BindingAdapter("setResText")

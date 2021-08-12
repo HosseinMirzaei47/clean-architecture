@@ -7,7 +7,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.OnLifecycleEvent
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.snackbar.Snackbar.Callback
-import com.speaking.partner.ui.R
 import com.speaking.partner.ui.utils.EventObserver
 
 fun Fragment.bindToSnackBarManager(manager: SnackbarMessageManager) {
@@ -56,11 +55,6 @@ fun Fragment.bindToSnackBarManager(manager: SnackbarMessageManager) {
                                             })
                                         }
                                         snackbar?.view?.z = Float.MAX_VALUE
-                                        try {
-                                            snackbar?.setAnchorView(R.id.fabAddTask)
-                                        } catch (e: Exception) {
-                                            e.printStackTrace()
-                                        }
                                         snackbar?.show()
                                     } ?: run {
                                         snackbar?.dismiss()

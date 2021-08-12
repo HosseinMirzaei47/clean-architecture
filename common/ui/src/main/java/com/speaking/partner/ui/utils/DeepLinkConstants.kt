@@ -1,7 +1,7 @@
 package com.speaking.partner.ui.utils
 
 object DeepLinkConstants {
-    const val DEEPLINK_BASE_URI = "todo://"
+    const val DEEPLINK_BASE_URI = "core://"
     const val DEEPLINK_TASK_URI = "task/"
     const val DEEPLINK_UPDATE_URI = "update/"
     const val DEEPLINK_SETTING_URI = "setting/"

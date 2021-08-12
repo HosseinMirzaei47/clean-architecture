@@ -5,8 +5,8 @@
     <item android:color="@android:color/transparent" android:state_enabled="true" android:state_selected="true" />
     <item android:color="@android:color/transparent" android:state_checked="true" android:state_enabled="true" />
     <!-- 30% of 87% opacity -->
-    <item android:alpha="0.30" android:color="@color/todo_color_surface" android:state_enabled="true" />
+    <item android:alpha="0.30" android:color="@color/core_color_surface" android:state_enabled="true" />
     <!-- 12% of 87% opacity -->
-    <item android:alpha="0.12" android:color="@color/todo_color_surface" />
+    <item android:alpha="0.12" android:color="@color/core_color_surface" />
 
 </selector>

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <!-- Item Rotation -->
-    <dimen name="rotation_right">0</dimen>
-    <dimen name="rotation_left">180</dimen>
-</resources>

@@ -1,10 +1,10 @@
 package com.speaking.partner.data.di.task
 
-import com.speaking.partner.data.database.TodoRoomDatabase
-import com.speaking.partner.data.datesources.task.TaskLocalDataSource
-import com.speaking.partner.data.datesources.task.TaskLocalDataSourceImpl
-import com.speaking.partner.data.repositories.task.TaskRepositoryImpl
-import com.speaking.partner.domain.repositories.task.TaskRepository
+import com.speaking.partner.data.database.CoreRoomDatabase
+import com.speaking.partner.data.datesources.sample.SampleLocalDataSource
+import com.speaking.partner.data.datesources.sample.SampleLocalDataSourceImpl
+import com.speaking.partner.data.repositories.sample.TaskRepositoryImpl
+import com.speaking.partner.domain.repositories.sample.TaskRepository
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -17,7 +17,7 @@ import javax.inject.Singleton
 abstract class TaskModule {
 
     @Binds
-    abstract fun bindsTaskDataSource(impl: TaskLocalDataSourceImpl): TaskLocalDataSource
+    abstract fun bindsTaskDataSource(impl: SampleLocalDataSourceImpl): SampleLocalDataSource
 
     @Binds
     abstract fun bindTaskRepository(impl: TaskRepositoryImpl): TaskRepository
@@ -25,8 +25,8 @@ abstract class TaskModule {
     companion object {
         @Singleton
         @Provides
-        fun provideTaskDao(
-            db: TodoRoomDatabase
-        ) = db.taskDao()
+        fun provideSampleDao(
+            db: CoreRoomDatabase
+        ) = db.sampleDao()
     }
 }

@@ -28,13 +28,13 @@
         <item name="colorPrimary">@color/picker_primary_color</item>
     </style>
 
-    <style name="TextAppearance.ToDo.UpdateDialog.Title" parent="@style/TextAppearance.ToDo.Page.Title">
+    <style name="TextAppearance.Core.UpdateDialog.Title" parent="@style/TextAppearance.Core.Page.Title">
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">@dimen/text_size_h3</item>
         <item name="android:textColor">@color/adaptive</item>
     </style>
 
-    <style name="TextAppearance.ToDo.UpdateDialog.Description" parent="@style/TextAppearance.ToDo.Page.Title">
+    <style name="TextAppearance.Core.UpdateDialog.Description" parent="@style/TextAppearance.Core.Page.Title">
         <item name="android:textStyle">normal</item>
         <item name="android:textSize">@dimen/text_size_micro</item>
     </style>
