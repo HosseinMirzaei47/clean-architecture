@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">تو دو</string>
+    <string name="about_us_body">با برنامه پیش برو</string>
+    <string name="we_ve_improved">به روز رسانی</string>
+    <string name="update_description">برای قابلیت های بیشتر و ارتقای تجربه ی کاربری لطفا برنامه را به روز کنید</string>
+    <string name="update_now">هم اکنون به روز کن</string>
+    <string name="ignore">نادیده گرفتن</string>
+    <string name="no_market_found">هیچ بازاری یافت نشد!</string>
+    <string name="what_s_new">تغییرات</string>
+    <string name="got_it">فهمیدم</string>
+</resources>

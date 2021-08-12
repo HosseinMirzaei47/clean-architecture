@@ -1,0 +1,11 @@
+include(":model")
+include(":data-model")
+include(":domain")
+include(":data")
+include(":shared")
+include(":app")
+include(":ui:task")
+include(":ui:profile")
+include(":common:ui")
+include(":common:android")
+rootProject.name = "Speaking Partner"

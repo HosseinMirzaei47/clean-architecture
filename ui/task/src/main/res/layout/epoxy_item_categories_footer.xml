@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout>
+
+    <data>
+
+        <variable
+            name="addCategoryClickListener"
+            type="comtest.dandeliontest.todotest.ui.utils.EpoxyActionListener" />
+    </data>
+
+    <com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/motion_handler"
+        onSafeClick="@{addCategoryClickListener::onAction}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_21sdp"
+        android:layout_marginVertical="@dimen/margin_small"
+        android:drawablePadding="@dimen/padding_small"
+        android:text="@string/new_category"
+        app:drawableStartCompat="@drawable/ic_add_category" />
+
+</layout>

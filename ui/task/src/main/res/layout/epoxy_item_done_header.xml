@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="count"
+            type="Integer" />
+
+        <variable
+            name="clickListener"
+            type="comtest.dandeliontest.todotest.ui.utils.EpoxyActionListener" />
+
+    </data>
+
+    <CheckBox
+        onSafeClick="@{clickListener::onAction}"
+        setCompleteCounts="@{count}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_large"
+        android:background="@null"
+        android:button="@drawable/done_status_check_box_selector"
+        android:buttonTint="@color/dim_gray"
+        android:gravity="start|center_vertical" />
+
+</layout>

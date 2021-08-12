@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "comtest.dandeliontest.todotest.data.datastore.proto";
+option java_multiple_files = true;
+
+message SavedStateInformation {
+    int64 latestDestinationId = 1;
+    int64 categoryId = 2;
+}

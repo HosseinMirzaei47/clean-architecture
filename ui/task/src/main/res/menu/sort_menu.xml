@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_item_sort_priority"
+        android:title="@string/sort_by_priority" />
+    <item
+        android:id="@+id/menu_item_sort_due_date"
+        android:title="@string/sort_by_due_date" />
+    <item
+        android:id="@+id/menu_item_sort_date_added"
+        android:title="@string/sort_by_date_added" />
+    <item
+        android:id="@+id/menu_item_sort_alphabetically"
+        android:title="@string/sort_by_alphabetically" />
+</menu>

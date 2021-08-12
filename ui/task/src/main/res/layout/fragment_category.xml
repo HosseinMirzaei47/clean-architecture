@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="comtest.dandeliontest.todotest.task.home.CategoryViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/bottomSheetLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_large">
+
+        <TextView
+            android:id="@+id/tvNewTaskTitle"
+            style="@style/TextAppearance.ToDo.Category.NewCategory.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="start|center_vertical"
+            android:text="@{vm.category.id == 0 ? @string/create_new_category : @string/edit_category}"
+            tools:text="Create New Category" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/et_category_name"
+            style="@style/Widget.Todo.MaterialComponents.TextInputLayout.FilledBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:hint="@string/hint_category_title"
+            app:bindFormFieldError="@{vm.categoryForm.getField(vm.FIELD_TITLE).observableException}"
+            app:bindFormFieldValue="@{vm.categoryForm.getField(vm.FIELD_TITLE).observableValue}"
+            app:hintEnabled="@{vm.categoryForm.getField(vm.FIELD_TITLE).observableIsValid ? false : true}">
+
+            <com.google.android.material.textfield.TextInputEditText
+                style="@style/Widget.Todo.TextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="text"
+                app:bindFormField="@{vm.categoryForm.getField(vm.FIELD_TITLE)}"
+                tools:text="Category Name" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveTag"
+            style="@style/Widget.Todo.Submit.Button"
+            enabledColor="@{vm.categoryForm.isValid}"
+            onSafeClick="@{vm::onSaveCategory}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/save"
+            tools:text="Save" />
+
+    </LinearLayout>
+
+</layout>

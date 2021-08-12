@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="isChecked"
+            type="Boolean" />
+
+        <variable
+            name="checkedChangeListener"
+            type="comtest.dandeliontest.todotest.ui.utils.EpoxyEventListener" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_privacy_policy"
+            style="@style/TextAppearance.ToDo.AllCategories.Item.Title"
+            onCheckedChange="@{checkedChangeListener}"
+            setResText="@{title}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:checkable="true"
+            android:textColor="@{isChecked ? @color/matisse : @color/dim_gray}"
+            app:backgroundTint="@android:color/transparent"
+            app:icon="@drawable/ic_circle"
+            app:iconPadding="@dimen/padding_small"
+            app:iconTint="@{isChecked ? @color/matisse : @color/dim_gray}"
+            tools:text="Vertical RecyclerView Item" />
+
+        <ImageView
+            invisibleUnless="@{isChecked}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|end"
+            android:layout_weight="1"
+            android:contentDescription="@string/todo"
+            android:src="@drawable/ic_tick" />
+
+    </LinearLayout>
+
+</layout>

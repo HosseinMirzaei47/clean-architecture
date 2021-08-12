@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="comtest.dandeliontest.todotest.domain.utils.DataStoreConstants" />
+
+        <variable
+            name="vm"
+            type="comtest.dandeliontest.todotest.task.settings.SettingsViewModel" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/todo_primary"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_normal"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btn_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/todo"
+                    android:onClick="@{() -> vm.onBackPressed()}"
+                    android:paddingVertical="@dimen/padding_normal"
+                    android:paddingEnd="@dimen/padding_normal"
+                    android:src="@drawable/ic_arrow_left"
+                    android:tint="@color/adaptive" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tv_profile_title"
+                    style="@style/TextAppearance.ToDo.Page.Title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_normal"
+                    android:text="@string/settings"
+                    android:textColor="@color/adaptive" />
+
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/ToDo.MaterialComponents.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/theme"
+                app:icon="@drawable/ic_settings_theme" />
+
+            <RadioGroup
+                android:id="@+id/rg_theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@{vm.selectedThemeId}"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_light"
+                    style="@style/Widget.Todo.Settings.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/radio_button_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:onClick="@{()->vm.onThemeChanged(DataStoreConstants.Theme.LIGHT)}"
+                    android:text="@string/theme_light" />
+
+                <RadioButton
+                    android:id="@+id/rb_dark"
+                    style="@style/Widget.Todo.Settings.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/radio_button_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:onClick="@{()->vm.onThemeChanged(DataStoreConstants.Theme.NIGHT)}"
+                    android:text="@string/theme_dark" />
+
+                <RadioButton
+                    android:id="@+id/rb_theme_system_default"
+                    style="@style/Widget.Todo.Settings.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/radio_button_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:onClick="@{()->vm.onThemeChanged(DataStoreConstants.Theme.SYS_DEF)}"
+                    android:text="@string/system_default" />
+
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/ToDo.MaterialComponents.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/time_format"
+                android:visibility="gone"
+                app:icon="@drawable/ic_settings_time_format" />
+
+            <RadioGroup
+                android:id="@+id/rg_time_format"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@{vm.selectedTimeFormatId}"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/rb_twelve"
+                    style="@style/Widget.Todo.Settings.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/radio_button_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:onClick="@{()->vm.onTimeFormatChanged(DataStoreConstants.TimeFormat.FORMAT_12)}"
+                    android:text="@string/time_format_12" />
+
+                <RadioButton
+                    android:id="@+id/rb_twenty_four"
+                    style="@style/Widget.Todo.Settings.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/radio_button_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:onClick="@{()->vm.onTimeFormatChanged(DataStoreConstants.TimeFormat.FORMAT_24)}"
+                    android:text="@string/time_format_24" />
+
+                <RadioButton
+                    android:id="@+id/rb_time_format_system_default"
+                    style="@style/Widget.Todo.Settings.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/radio_button_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:onClick="@{()->vm.onTimeFormatChanged(DataStoreConstants.TimeFormat.SYS_DEF)}"
+                    android:text="@string/system_default" />
+
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/ToDo.MaterialComponents.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/language"
+                app:icon="@drawable/ic_settings_language" />
+
+            <RadioGroup
+                android:id="@+id/rg_language"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checkedButton="@{vm.selectedLanguageId}"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_english"
+                    style="@style/Widget.Todo.Settings.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/radio_button_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:onClick="@{()->vm.onAppLanguageChanged(DataStoreConstants.Languages.ENGLISH)}"
+                    android:text="@string/language_english" />
+
+                <RadioButton
+                    android:id="@+id/rb_persian"
+                    style="@style/Widget.Todo.Settings.RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/radio_button_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/margin_micro"
+                    android:layout_weight="1"
+                    android:onClick="@{()->vm.onAppLanguageChanged(DataStoreConstants.Languages.PERSIAN)}"
+                    android:text="@string/language_persian" />
+
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/ToDo.MaterialComponents.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_normal"
+                android:text="@string/about"
+                app:icon="@drawable/ic_settings_about" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_privacy_policy"
+                style="@style/ToDo.Settings.Button.About"
+                onSafeClick="@{vm::onPrivacyClick}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/privacy_policy" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_feedback"
+                style="@style/ToDo.Settings.Button.About"
+                onSafeClick="@{vm::onFeedBackClick}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/feedback" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_rate_us"
+                style="@style/ToDo.Settings.Button.About"
+                onSafeClick="@{vm::onRateUsClick}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/rate_us" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/ToDo.Settings.Button.About"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:alpha=".7"
+                    android:clickable="false"
+                    android:text="@string/version" />
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/ToDo.Settings.Button.About"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:gravity="end|center_vertical"
+                    android:text="@{vm.versionCode}"
+                    android:textColor="@color/pink_swan" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

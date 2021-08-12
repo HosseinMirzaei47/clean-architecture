@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="error_blank_title">Please enter a title</string>
+    <string name="add_new_category">Add New</string>
+    <string name="profile_title_task_overview">Task OverView</string>
+    <string name="profile_title_categories">Categories</string>
+    <string name="category_dialog">Category</string>
+    <string name="completed">Completed</string>
+    <string name="allTasks">All Tasks</string>
+    <string name="chart_no_data">No data available</string>
+    <string name="settings_choose_theme">Choose Theme</string>
+    <string name="settings_choose_language">Choose Language</string>
+    <string name="settings_tags">Manage Tags</string>
+    <string name="category_management_title">Category Management</string>
+    <string name="save">Save</string>
+    <string name="time_format_12">12 Hours</string>
+    <string name="time_format_24">24 Hours</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="language_english">English</string>
+    <string name="language_persian">فارسی</string>
+    <string name="system_default">System Default</string>
+    <string name="about">About App</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="feedback">Feedback</string>
+    <string name="help_center">Help Center</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="version">Version</string>
+    <string name="no_email_error">There are no email clients installed.</string>
+    <string name="feedback_email_subject">FeedBack About ToDo</string>
+    <string name="no_category_added">No Category Added</string>
+    <string name="no_data_available">No Data Available</string>
+</resources>

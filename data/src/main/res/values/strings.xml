@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="task_notifications">Upcoming task</string>
+    <string name="today">Today</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="seven_days">7 Days</string>
+    <string name="custom">Custom</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_med">Medium</string>
+    <string name="priority_high">High</string>
+    <string name="with">With</string>
+    <string name="without">Without</string>
+    <string name="done">Done</string>
+    <string name="undone">Undone</string>
+    <string name="no_priority">No Priority</string>
+</resources>

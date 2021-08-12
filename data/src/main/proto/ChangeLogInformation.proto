@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_package = "comtest.dandeliontest.todotest.data.datastore.proto";
+option java_multiple_files = true;
+
+message ChangeLogInformation {
+  bool isUpdateAvailable = 1;
+  bool isForceUpdate = 2;
+  string version = 3;
+  bool isShowed = 4;
+  repeated string changes = 5;
+}

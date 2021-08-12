@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Common dimensions -->
+    <dimen name="margin_large">@dimen/_32sdp</dimen>
+    <dimen name="margin_normal">@dimen/_16sdp</dimen>
+    <dimen name="margin_ten">@dimen/_10sdp</dimen>
+    <dimen name="margin_small">@dimen/_8sdp</dimen>
+    <dimen name="margin_micro">@dimen/_5sdp</dimen>
+    <dimen name="margin_three">@dimen/_3sdp</dimen>
+
+    <dimen name="padding_2x_large">@dimen/_35sdp</dimen>
+    <dimen name="padding_very_large">@dimen/_25sdp</dimen>
+    <dimen name="padding_large">@dimen/_16sdp</dimen>
+    <dimen name="padding_normal">@dimen/_10sdp</dimen>
+    <dimen name="padding_eight">@dimen/_8sdp</dimen>
+    <dimen name="padding_small">@dimen/_5sdp</dimen>
+
+    <dimen name="text_size_h1">@dimen/_24ssp</dimen>
+    <dimen name="text_size_h2">@dimen/_20ssp</dimen>
+    <dimen name="text_size_h3">@dimen/_18ssp</dimen>
+    <dimen name="text_size_b1">@dimen/_16ssp</dimen>
+    <dimen name="text_size_b2">@dimen/_14ssp</dimen>
+    <dimen name="text_size_small">@dimen/_12ssp</dimen>
+    <dimen name="text_size_micro">@dimen/_10ssp</dimen>
+
+    <dimen name="spacing_large">@dimen/_10sdp</dimen>
+    <dimen name="spacing_normal">@dimen/_8sdp</dimen>
+    <dimen name="spacing_micro">@dimen/_4sdp</dimen>
+
+    <dimen name="zero">0dp</dimen>
+
+    <!-- Global elevation -->
+    <dimen name="elevation_small">@dimen/_2sdp</dimen>
+    <dimen name="elevation_normal">@dimen/_8sdp</dimen>
+
+    <!-- Global image items -->
+    <dimen name="global_item_image_size">@dimen/_50sdp</dimen>
+
+    <!-- Radius -->
+    <dimen name="radius_very_large">@dimen/_18sdp</dimen>
+    <dimen name="radius_large">@dimen/_15sdp</dimen>
+    <dimen name="radius_normal">@dimen/_10sdp</dimen>
+    <dimen name="radius_small">@dimen/_3sdp</dimen>
+    <dimen name="radius_medium">8dp</dimen>
+    <!-- Toolbars -->
+    <dimen name="toolbar_inset_start">0dp</dimen>
+
+    <!-- Settings -->
+    <dimen name="radio_button_height">@dimen/_20sdp</dimen>
+    <!-- Filters -->
+    <dimen name="radio_button_height_filter">@dimen/_20sdp</dimen>
+
+    <!-- Item Rotation -->
+    <dimen name="rotation_right">180</dimen>
+    <dimen name="rotation_left">0</dimen>
+
+</resources>

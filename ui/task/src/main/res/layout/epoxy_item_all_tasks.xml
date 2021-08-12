@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="title"
+            type="String" />
+
+        <variable
+            name="description"
+            type="String" />
+
+        <variable
+            name="dueDate"
+            type="com.support.multicalendar.DandelionDate" />
+
+        <variable
+            name="dueTime"
+            type="com.support.multicalendar.DandelionDate" />
+
+        <variable
+            name="isDone"
+            type="Boolean" />
+
+        <variable
+            name="priority"
+            type="Integer" />
+
+        <variable
+            name="clickListener"
+            type="comtest.dandeliontest.todotest.ui.utils.EpoxyActionListener" />
+
+        <variable
+            name="checkedChangeListener"
+            type="comtest.dandeliontest.todotest.ui.utils.EpoxyEventListener" />
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/itemTaskCardView"
+        style="@style/Widget.Todo.CardView"
+        onSafeClick="@{clickListener::onAction}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_normal"
+        android:layout_marginVertical="@dimen/margin_micro">
+
+        <View
+            android:id="@+id/line"
+            style="@style/Widget.Todo.HorizontalLine"
+            setColorByPriority="@{priority}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_gravity="bottom" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_50sdp">
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/cb_task_item_is_done"
+                onCheckedChange="@{checkedChangeListener}"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_marginStart="@dimen/margin_normal"
+                android:button="@drawable/epoxy_custom_checkbox"
+                android:checked="@{isDone}"
+                android:stateListAnimator="@animator/checkbox_scale_animator"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:useMaterialThemeColors="false" />
+
+            <TextView
+                android:id="@+id/tv_tasks_item_title"
+                style="@style/TextAppearance.ToDo.AllTasks.Item.Title"
+                setStrike="@{isDone}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/margin_micro"
+                android:includeFontPadding="false"
+                android:text="@{title}"
+                android:textAlignment="viewStart"
+                android:textColor="@{isDone ? @color/darker_gray : @color/task_item_title }"
+                app:layout_constraintBottom_toBottomOf="@id/cb_task_item_is_done"
+                app:layout_constraintEnd_toStartOf="@id/tvDueDate"
+                app:layout_constraintStart_toEndOf="@id/cb_task_item_is_done"
+                app:layout_constraintTop_toTopOf="@id/cb_task_item_is_done"
+                tools:text="@tools:sample/lorem" />
+
+            <ImageView
+                android:id="@+id/iv_tasks_item_priority"
+                setSrcByPriority="@{priority, default = @drawable/ic_priority_high_task_item}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_three"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:contentDescription="@string/priority"
+                app:layout_constraintStart_toStartOf="@id/tv_tasks_item_title"
+                app:layout_constraintTop_toBottomOf="@id/tv_tasks_item_title"
+                tools:src="@drawable/ic_priority_low_task_item" />
+
+            <ImageView
+                setSrcByDesc="@{description.empty}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_three"
+                android:contentDescription="@string/description"
+                app:layout_constraintStart_toEndOf="@id/iv_tasks_item_priority"
+                app:layout_constraintTop_toTopOf="@id/iv_tasks_item_priority"
+                tools:src="@drawable/ic_priority_low_task_item" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvDueDate"
+                style="@style/TextAppearance.ToDo.AllTasks.Item.DueDate"
+                goneUnless="@{dueDate == null}"
+                onDueDateSet="@{dueDate}"
+                onDueTimeSet="@{dueTime}"
+                setStrike="@{isDone}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_ten"
+                android:layout_marginEnd="@dimen/margin_normal"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="@id/tv_tasks_item_title"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_tasks_item_title"
+                app:strokeColor="@color/material_on_surface_stroke"
+                tools:text="10:00 AM" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
