@@ -19,7 +19,7 @@ android {
 
 dependencies {
 
-    api(project(":common:android"))
+    api(project(":common-android"))
     implementation(project(":data-model"))
     implementation(project(":domain"))
 

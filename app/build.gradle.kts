@@ -27,10 +27,10 @@ android {
 }
 
 dependencies {
-    implementation(project(":ui:home"))
+    implementation(project(":ui-home"))
     implementation(project((":data")))
-    implementation(project((":common:android")))
-    implementation(project((":common:ui")))
+    implementation(project((":common-android")))
+    implementation(project((":common-ui")))
     implementation(project((":shared")))
     implementation(project(":data-model"))
     implementation(project((":model")))

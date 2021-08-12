@@ -19,7 +19,7 @@ dependencies {
 
     api(project(":shared"))
     api(project(":domain"))
-    api(project(":common:android"))
+    api(project(":common-android"))
 
     implementation(Libraries.Kotlin.jdk)
     api(Libraries.AndroidX.appCompat)

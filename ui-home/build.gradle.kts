@@ -23,7 +23,7 @@ android {
 
 dependencies {
 
-    implementation(project(":common:ui"))
+    implementation(project(":common-ui"))
     implementation(Libraries.Epoxy.dataBinding)
     api(Libraries.Epoxy.core)
     kapt(Libraries.Epoxy.processor)
