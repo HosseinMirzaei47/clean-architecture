@@ -1,5 +1,5 @@
 object Config {
-    const val applicationId = "comtest.dandeliontest.todotest"
+    const val applicationId = "com.speaking.partner"
     const val versionCode = 2
     const val versionName = "1.1.0"
 }

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="comtest.dandeliontest.todotest.task.home.HomeFragment"
+        android:name="com.speaking.partner.task.home.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home">
 
@@ -39,7 +39,7 @@
 
     <fragment
         android:id="@+id/settingsFragment"
-        android:name="comtest.dandeliontest.todotest.task.settings.SettingsFragment"
+        android:name="com.speaking.partner.task.settings.SettingsFragment"
         android:label="SettingsFragment"
         tools:layout="@layout/fragment_settings">
 
@@ -49,7 +49,7 @@
 
     <fragment
         android:id="@+id/tasksFragment"
-        android:name="comtest.dandeliontest.todotest.task.tasks.TasksFragment"
+        android:name="com.speaking.partner.task.tasks.TasksFragment"
         android:label="@string/home_fragment_title"
         tools:layout="@layout/fragment_tasks">
         <action
@@ -59,7 +59,7 @@
 
     <dialog
         android:id="@+id/addTaskFragment"
-        android:name="comtest.dandeliontest.todotest.task.task.AddTaskFragment"
+        android:name="com.speaking.partner.task.task.AddTaskFragment"
         android:label="AddTaskFragment"
         tools:layout="@layout/fragment_add_task">
 
@@ -78,7 +78,7 @@
 
     <dialog
         android:id="@+id/categoryFragment"
-        android:name="comtest.dandeliontest.todotest.task.home.CategoryFragment"
+        android:name="com.speaking.partner.task.home.CategoryFragment"
         android:label="@string/category_dialog"
         tools:layout="@layout/fragment_category">
         <argument

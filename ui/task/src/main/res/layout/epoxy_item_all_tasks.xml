@@ -31,11 +31,11 @@
 
         <variable
             name="clickListener"
-            type="comtest.dandeliontest.todotest.ui.utils.EpoxyActionListener" />
+            type="com.speaking.partner.ui.utils.EpoxyActionListener" />
 
         <variable
             name="checkedChangeListener"
-            type="comtest.dandeliontest.todotest.ui.utils.EpoxyEventListener" />
+            type="com.speaking.partner.ui.utils.EpoxyEventListener" />
 
     </data>
 

@@ -9,7 +9,7 @@
 
         <variable
             name="clickListener"
-            type="comtest.dandeliontest.todotest.ui.utils.EpoxyActionListener" />
+            type="com.speaking.partner.ui.utils.EpoxyActionListener" />
 
     </data>
 

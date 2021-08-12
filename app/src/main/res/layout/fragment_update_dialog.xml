@@ -6,7 +6,7 @@
 
         <variable
             name="vm"
-            type="comtest.dandeliontest.todotest.update.UpdateViewModel" />
+            type="com.speaking.partner.update.UpdateViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

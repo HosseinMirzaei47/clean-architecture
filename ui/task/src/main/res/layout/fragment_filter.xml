@@ -3,11 +3,11 @@
 
     <!--<data>
 
-        <import type="comtest.dandeliontest.todotest.model.models.task.FiltersStatesConstants" />
+        <import type="com.speaking.partner.model.models.task.FiltersStatesConstants" />
 
         <variable
             name="vm"
-            type="comtest.dandeliontest.todotest.task.filter.FilterViewModel" />
+            type="com.speaking.partner.task.filter.FilterViewModel" />
 
     </data>-->
 

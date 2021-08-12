@@ -7,11 +7,11 @@
 
         <variable
             name="vm"
-            type="comtest.dandeliontest.todotest.task.home.HomeViewModel" />
+            type="com.speaking.partner.task.home.HomeViewModel" />
 
         <variable
             name="defaultCategories"
-            type="comtest.dandeliontest.todotest.model.models.task.DefaultCategories" />
+            type="com.speaking.partner.model.models.task.DefaultCategories" />
     </data>
 
     <LinearLayout

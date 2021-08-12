@@ -6,7 +6,7 @@
 
         <variable
             name="vm"
-            type="comtest.dandeliontest.todotest.update.ChangelogViewModel" />
+            type="com.speaking.partner.update.ChangelogViewModel" />
     </data>
 
     <androidx.cardview.widget.CardView

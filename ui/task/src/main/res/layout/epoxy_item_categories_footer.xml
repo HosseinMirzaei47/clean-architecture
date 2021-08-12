@@ -6,7 +6,7 @@
 
         <variable
             name="addCategoryClickListener"
-            type="comtest.dandeliontest.todotest.ui.utils.EpoxyActionListener" />
+            type="com.speaking.partner.ui.utils.EpoxyActionListener" />
     </data>
 
     <com.google.android.material.textview.MaterialTextView xmlns:android="http://schemas.android.com/apk/res/android"

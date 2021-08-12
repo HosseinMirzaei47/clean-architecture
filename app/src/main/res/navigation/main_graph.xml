@@ -9,7 +9,7 @@
 
     <dialog
         android:id="@+id/updateDialogFragment"
-        android:name="comtest.dandeliontest.todotest.update.UpdateDialogFragment"
+        android:name="com.speaking.partner.update.UpdateDialogFragment"
         android:label="UpdateDialogFragment"
         tools:layout="@layout/fragment_update_dialog">
 
@@ -24,7 +24,7 @@
 
     <dialog
         android:id="@+id/changelogDialogFragment"
-        android:name="comtest.dandeliontest.todotest.update.ChangelogDialogFragment"
+        android:name="com.speaking.partner.update.ChangelogDialogFragment"
         android:label="ChangelogDialogFragment"
         tools:layout="@layout/fragment_changelog_dialog">
 

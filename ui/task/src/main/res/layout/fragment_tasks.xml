@@ -7,7 +7,7 @@
 
         <variable
             name="vm"
-            type="comtest.dandeliontest.todotest.task.tasks.TasksViewModel" />
+            type="com.speaking.partner.task.tasks.TasksViewModel" />
 
     </data>
 

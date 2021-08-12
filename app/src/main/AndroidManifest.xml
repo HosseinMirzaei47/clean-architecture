@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="comtest.dandeliontest.todotest">
+    package="com.speaking.partner">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidArchitectureSamples">
         <activity
-            android:name="comtest.dandeliontest.todotest.MainActivity"
+            android:name="com.speaking.partner.MainActivity"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustNothing">
             <nav-graph android:value="@navigation/main_graph" />
@@ -28,11 +28,11 @@
         </activity>
 
         <receiver
-            android:name="comtest.dandeliontest.todotest.domain.notification.AlarmBroadcastReceiver"
+            android:name="com.speaking.partner.domain.notification.AlarmBroadcastReceiver"
             android:exported="false" />
 
         <receiver
-            android:name="comtest.dandeliontest.todotest.notification.SystemBootBroadcastReceiver"
+            android:name="com.speaking.partner.notification.SystemBootBroadcastReceiver"
             android:directBootAware="true"
             android:enabled="true"
             android:exported="true">
@@ -43,7 +43,7 @@
         </receiver>
 
         <receiver
-            android:name="comtest.dandeliontest.todotest.domain.notification.NotificationActionsReceiver"
+            android:name="com.speaking.partner.domain.notification.NotificationActionsReceiver"
             android:exported="false" />
 
         <provider

@@ -4,11 +4,11 @@
 
     <data>
 
-        <import type="comtest.dandeliontest.todotest.domain.utils.DataStoreConstants" />
+        <import type="com.speaking.partner.domain.utils.DataStoreConstants" />
 
         <variable
             name="vm"
-            type="comtest.dandeliontest.todotest.task.settings.SettingsViewModel" />
+            type="com.speaking.partner.task.settings.SettingsViewModel" />
 
     </data>
 

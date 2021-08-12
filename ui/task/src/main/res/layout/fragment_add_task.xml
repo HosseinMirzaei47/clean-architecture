@@ -7,17 +7,17 @@
 
         <variable
             name="vm"
-            type="comtest.dandeliontest.todotest.task.task.AddTaskViewModel" />
+            type="com.speaking.partner.task.task.AddTaskViewModel" />
 
-        <import type="comtest.dandeliontest.todotest.model.models.task.PriorityType" />
+        <import type="com.speaking.partner.model.models.task.PriorityType" />
 
-        <import type="comtest.dandeliontest.todotest.model.models.task.CommonDueDates" />
+        <import type="com.speaking.partner.model.models.task.CommonDueDates" />
 
-        <import type="comtest.dandeliontest.todotest.model.models.task.CommonDueTime" />
+        <import type="com.speaking.partner.model.models.task.CommonDueTime" />
 
-        <import type="comtest.dandeliontest.todotest.model.models.task.CommonReminderTime" />
+        <import type="com.speaking.partner.model.models.task.CommonReminderTime" />
 
-        <import type="comtest.dandeliontest.todotest.task.task.VisibleItemStates" />
+        <import type="com.speaking.partner.task.task.VisibleItemStates" />
 
     </data>
 
