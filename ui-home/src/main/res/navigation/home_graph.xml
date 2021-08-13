@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.speaking.partner.HomeFragment"
+        android:name="com.app.core.HomeFragment"
         android:label="HomeFragment"
         tools:layout="@layout/fragment_home" />
 

@@ -6,7 +6,7 @@
 
         <variable
             name="vm"
-            type="com.speaking.partner.MainViewModel" />
+            type="com.app.core.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

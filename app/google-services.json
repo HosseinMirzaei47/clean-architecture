@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:717146133300:android:669db5f11a934d44d8cb61",
         "android_client_info": {
-          "package_name": "com.speaking.partner"
+          "package_name": "com.app.core"
         }
       },
       "oauth_client": [

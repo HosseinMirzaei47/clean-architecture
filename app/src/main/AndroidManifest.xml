@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.speaking.partner">
+    package="com.app.core">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidArchitectureSamples">
         <activity
-            android:name="com.speaking.partner.MainActivity"
+            android:name="com.app.core.MainActivity"
             android:launchMode="singleTop"
             android:windowSoftInputMode="adjustNothing">
             <nav-graph android:value="@navigation/main_graph" />

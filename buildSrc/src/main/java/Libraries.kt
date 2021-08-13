@@ -1,5 +1,5 @@
 object Config {
-    const val applicationId = "com.speaking.partner"
+    const val applicationId = "com.app.core"
     const val versionCode = 2
     const val versionName = "1.1.0"
 }
